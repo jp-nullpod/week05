@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <button id="btn">Click me</button>
+    <button id="btn1">Hey Hey</button>
+    <button id="jsstyle" class="dark-background">Style</button>
+
+    <script>
+        let x = document.getElementById("btn")
+        let y = document.getElementById("btn1")
+
+        y.addEventListener("mouseover", RespondMouseOver);
+
+        x.addEventListener("mouseover", RespondMouseOver);
+
+        function RespondMouseOver(e) {
+            console.log("e", e)
+            // all the properties of the event object
+            console.log("My mouse is over the btn named" + e.target.innerHTML)
+            console.log("e.type: ", e.type)
+            // e.type: mouseover
+            console.log("e.target: ", e.target)
+            // e.target:  <button id=​"btn1">​Hey Hey​</button>​
+        }
+
+        let btnStyle = document.getElementById("jsstyle");
+        btnStyle.addEventListener("mouseover", (e) => {
+            e.target.classList.add('hover-background');
+        });
+        btnStyle.addEventListener("mouseout", (e) => {
+            e.target.classList.remove('hover-background');
+        });
+        btnStyle.addEventListener("click", (e) => {
+            e.target.classList.toggle('light-background')
+        });
+        btnStyle.addEventListener("dblclick", () => {
+
+        });
+    </script>
+</body>
+
+</html>

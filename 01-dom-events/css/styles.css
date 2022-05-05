@@ -1,0 +1,20 @@
+.dark-background {
+    background-color: black;
+    color: white;
+}
+
+.light-background {
+    background-color: aquamarine;
+    color: black;
+    width: 100px;
+}
+
+.hover-background {
+    background-color: red;
+    color: yellow;
+}
+
+#customdiv {
+    width: 50%;
+    align-items: baseline;
+}
